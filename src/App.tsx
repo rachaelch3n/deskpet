@@ -3,17 +3,20 @@ import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
+// ✅ Correct casing/path here
+import ToDoPanel from "./components/ToDoPanel";
+
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
 
   async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
     setGreetMsg(await invoke("greet", { name }));
   }
 
   return (
-    <main className="container">
+    // ✅ Make this relatively positioned so the panel can anchor bottom-left
+    <main className="container" style={{ position: "relative", minHeight: "100vh" }}>
       <h1>Welcome to Tauri + React</h1>
 
       <div className="row">
@@ -27,6 +30,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
       <p>Click on the Tauri, Vite, and React logos to learn more.</p>
 
       <form
@@ -43,7 +47,11 @@ function App() {
         />
         <button type="submit">Greet</button>
       </form>
+
       <p>{greetMsg}</p>
+
+      {/* ✅ Add the To-Do panel */}
+      <ToDoPanel />
     </main>
   );
 }

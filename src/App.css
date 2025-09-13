@@ -114,3 +114,9 @@ button {
     background-color: #0f0f0f69;
   }
 }
+
+/* the overlay you already have to drag the whole window */
+.drag-overlay { position: absolute; inset: 0; -webkit-app-region: drag; pointer-events: none; }
+
+/* mark interactive elements so they are NOT draggable */
+.clickable { -webkit-app-region: no-drag; }
