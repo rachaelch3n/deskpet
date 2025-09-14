@@ -46,7 +46,7 @@ else if (taskCount > 2) bearImage = stressedPet0;
     <div
       style={{
         width: "100%",
-        background: "white",
+        background: "transparent",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

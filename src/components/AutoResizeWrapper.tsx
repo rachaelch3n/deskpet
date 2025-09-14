@@ -22,11 +22,8 @@ export default function AutoResizeWrapper({ children, forceSize, deps = [] }: Au
         await win.setSize(new LogicalSize(Math.ceil(rect.width), Math.ceil(rect.height)));
       }
     };
-
-    // 🚀 Always resize once right away
     resizeToFit();
 
-    // If not forcing a fixed size, also watch for changes
     if (!forceSize && containerRef.current) {
       const observer = new ResizeObserver(async (entries) => {
         for (const entry of entries) {
