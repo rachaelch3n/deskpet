@@ -115,21 +115,12 @@ button {
   }
 }
 
-html, body, #root {
-  height: 100%;
-  background: transparent; /* important for see-through */
-}
+html, body, #root { height: 100%; background: transparent; }
 
-/* If you use a big drag overlay to move the window */
-.drag-overlay {
-  position: absolute;
-  inset: 0;
-  -webkit-app-region: drag;
-  pointer-events: none;
-}
+.drag-overlay { position: absolute; inset: 0; -webkit-app-region: drag; pointer-events: none; }
+/* mark inputs/buttons so they are not draggable and stay clickable */
+.clickable { -webkit-app-region: no-drag; }
 
-/* Any interactive UI must opt out of dragging */
-.clickable {
-  -webkit-app-region: no-drag;
-}
+/* (optional) tiny reset for nicer text in the bars */
+.bar-text { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
 

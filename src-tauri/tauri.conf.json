@@ -13,12 +13,12 @@
     "windows": [
       {
         "label": "main",
+        "width": 340,
+        "height": 360,
+        "resizable": true,
         "transparent": true,
-        "decorations": false,
-        "alwaysOnTop": true,
-        "width": 220,
-        "height": 220,
-        "resizable": false
+        "decorations": true,     
+        "alwaysOnTop": true
       }
     ],
     "security": {
