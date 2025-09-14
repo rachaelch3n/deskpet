@@ -114,3 +114,22 @@ button {
     background-color: #0f0f0f69;
   }
 }
+
+html, body, #root {
+  height: 100%;
+  background: transparent; /* important for see-through */
+}
+
+/* If you use a big drag overlay to move the window */
+.drag-overlay {
+  position: absolute;
+  inset: 0;
+  -webkit-app-region: drag;
+  pointer-events: none;
+}
+
+/* Any interactive UI must opt out of dragging */
+.clickable {
+  -webkit-app-region: no-drag;
+}
+

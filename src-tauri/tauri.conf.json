@@ -12,9 +12,13 @@
   "app": {
     "windows": [
       {
-        "title": "deskpet",
-        "width": 800,
-        "height": 600
+        "label": "main",
+        "transparent": true,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "width": 220,
+        "height": 220,
+        "resizable": false
       }
     ],
     "security": {
