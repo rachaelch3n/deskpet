@@ -2,5 +2,10 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    deskpet_lib::run()
+    tauri::Builder::default()
+        .plugin(tauri_plugin_positioner::init())
+        .run(tauri::generate_context!())
+        .expect("error while running tauri application");
 }
+
+  
